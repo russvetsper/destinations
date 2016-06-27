@@ -28,8 +28,21 @@ $(document).ready(function() {
     var notes = $("#new-notes").val();
 
     var myNewDestination = new Destination(location, geo, time, notes, landmark);
+    $("ul#destinations").append("<li><span class='destination'>" + myNewDestination.destinationName + "</span></li>");
 
-    console.log(myNewDestination);
+    $("input#new-location-name").val("");
+    $("input#new-location-geo").val("");
+    $("input#new-time-of-year").val("");
+    $("input#new-notes").val("");
+    $("input#new-landmark").val("");
+
+    $(".destination").last().click(function() {
+      console.log("string")
+      $("#show-destinations").show();
+      $("#show-destinations h2").text(myNewDestination.destinationName);
+      $(".location").text(myNewDestination.destinationGeo);
+      $(".landmark").text(myNewDestination.destinationLandmarks);
+    });
 
   });
 });
