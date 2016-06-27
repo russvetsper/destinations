@@ -16,3 +16,20 @@ function Destination(name, geo, time, notes, landmarks) {
 }
 
 console.log("Japan" + "Los Angeles" + "Quebec");
+
+$(document).ready(function() {
+  $("form#new-destination").submit(function(event) {
+    event.preventDefault();
+    // debugger;
+    var location = $("#new-location-name").val();
+    var geo = $("#new-location-geo").val();
+    var time = $("#new-time-of-year").val();
+    var landmark = $("#new-landmark").val();
+    var notes = $("#new-notes").val();
+
+    var myNewDestination = new Destination(location, geo, time, notes, landmark);
+
+    console.log(myNewDestination);
+
+  });
+});
