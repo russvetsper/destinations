@@ -3,7 +3,7 @@
 
 #### Business Specs for the project
 
-* It can track destinations to which you've been
+* It can display destinations to which you've been
   * **Example input:** Display my destinations
   * **Example output:** "Japan, Los Angeles, Quebec"
 
